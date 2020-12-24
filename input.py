@@ -1,8 +1,15 @@
 #Input fra bruker
 
-#
+#Entry
+#Antall
+#Stop-loss
+#Tilgjengelig kapital
 
-#Entry, Antall
-#Entry, Antall
-#...
 
+
+#Output
+
+#Ordrestørrelse
+#Ordrestørrelse %
+#Risiko %
+#Risiko av total %

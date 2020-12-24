@@ -1,4 +1,3 @@
-
 #1 desimal
 def f1 (tall):
     return format(tall, '.1f')
