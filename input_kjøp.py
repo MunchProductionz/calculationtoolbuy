@@ -4,7 +4,8 @@
 #Antall
 #Stop-loss
 #Tilgjengelig kapital
-
+#Ordrepris
+#Antall
 
 
 #Output

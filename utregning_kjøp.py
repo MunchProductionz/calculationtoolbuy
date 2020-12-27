@@ -11,7 +11,6 @@ def utregning_kjøp ():
     kapital = float(input('Tilgjengelig kapital: '))
 
 
-
     #Utregning
     
     #Ordrestørrelse
@@ -29,12 +28,13 @@ def utregning_kjøp ():
     risiko_total_f = formating.f2(risiko_total)
 
 
-
     #Outputs
     oversikt.append(ordrestørrelse)
     oversikt.append(ordrestørrelse_prosent_f)
     oversikt.append(risiko)
     oversikt.append(risiko_prosent_f)
     oversikt.append(risiko_total_f)
+    oversikt.append(entry)
+    oversikt.append(antall)
 
     return oversikt
