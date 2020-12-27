@@ -1,6 +1,7 @@
 from formating import f2
 
-def kjøp ():
+def utregning_kjøp ():
+    oversikt = []
 
     #Inputs
     print('Vennligst skriv inn ønsket ordre.')
@@ -30,8 +31,10 @@ def kjøp ():
 
 
     #Outputs
-    print(f'Kjøpsum: {ordrestørrelse}')
-    print(f'Kjøpsum av kapital: {ordrestørrelse_prosent_f}%')
-    print(f'Risiko ved handel: {risiko} kr')
-    print(f'Risiko ved handel: {risiko_prosent_f}%')
-    print(f'Risiko av total: {risiko_total_f}%')
+    oversikt.append(ordrestørrelse)
+    oversikt.append(ordrestørrelse_prosent_f)
+    oversikt.append(risiko)
+    oversikt.append(risiko_prosent_f)
+    oversikt.append(risiko_total_f)
+
+    return oversikt
