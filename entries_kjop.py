@@ -2,8 +2,10 @@
 #orders = [[price_1, amount_1], [price_2, amount_2], ...]
 
 def kjop ():
-    print('Skriv inn ordre på formen "<pris> <antall>"')
-    
+    print('Vennligst skriv inn ønsket ordre.')
+    print('Skriv inn ordre på formen "<pris> <antall>".')
+    print()
+
     orders = []
     order = input('Order 1: ').split()
     orders.append(order)

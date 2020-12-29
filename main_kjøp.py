@@ -1,7 +1,7 @@
 from formating import f2
 from entries_kjop import kjop
-from utregning import utregning_kjøp
-from print_kjøp import print_kjøp
+from utregning import utregning_kjop
+from print_kjop import print_kjop
 
-def main ():
-    print_kjøp(utregning_kjøp())
+def main_kjop ():
+    print_kjop(utregning_kjop())

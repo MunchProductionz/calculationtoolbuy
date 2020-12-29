@@ -10,7 +10,7 @@
 
 #Output
 
-#Ordrestørrelse
-#Ordrestørrelse %
+#Ordrestorrelse
+#Ordrestorrelse %
 #Risiko %
 #Risiko av total %
