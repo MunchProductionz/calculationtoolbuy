@@ -9,3 +9,8 @@ def f1 (tall):
 #2 desimaler
 def f2 (tall):
     return format(tall, '.2f')
+
+
+def eco(tall):
+
+    

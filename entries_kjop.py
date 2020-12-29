@@ -4,7 +4,6 @@
 def kjop ():
     print('Vennligst skriv inn ønsket ordre.')
     print('Skriv inn ordre på formen "<pris> <antall>".')
-    print()
 
     orders = []
     order = input('Order 1: ').split()
