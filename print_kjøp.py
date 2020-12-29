@@ -8,8 +8,8 @@ def print_kjøp (liste):
     risiko_total_f = liste[4]
 
     #Outputs
-    print(f'Kjøpsum: {ordrestørrelse}')
-    print(f'Kjøpsum av kapital: {ordrestørrelse_prosent_f}%')
+    print(f'Kjøpssum: {ordrestørrelse}')
+    print(f'Kjøpssum av kapital: {ordrestørrelse_prosent_f}%')
     print(f'Risiko ved handel: {risiko} kr')
     print(f'Risiko ved handel: {risiko_prosent_f}%')
     print(f'Risiko av total: {risiko_total_f}%')
