@@ -20,11 +20,17 @@ def utregning_kjop ():
 
     print()
     
-    #Stoploss / Kapital
+    #Stoploss
     stoploss = float(input('Stoploss-pris per aksje: '))
+    stoploss_f = f2(stoploss)
+
+    #Kapital
     kapital = float(input('Tilgjengelig kapital: '))
 
+    print()
+    print()
 
+    
 
     #Utregning
     
@@ -35,9 +41,9 @@ def utregning_kjop ():
     ordrestorrelse_prosent_f = formating.f2(ordrestorrelse_prosent)
 
     #Risiko %
-    risiko_prosent = (1 - (stoploss / avg_entry)) * 100         #risiko_prosent = (1 - (stoploss /avg_entry))
+    risiko_prosent = (1 - (stoploss / avg_entry)) * 100         #risiko_prosent = (1 - (stoploss /avg_entry)) * 100
     risiko_prosent_f = formating.f2(risiko_prosent)
-    risiko = risiko_prosent * ordrestorrelse                    #risiko = risiko_prosent * ordrestorrelse
+    risiko = (risiko_prosent / 100) * ordrestorrelse            #risiko = (risiko_prosent / 100) * ordrestorrelse
     risiko_f = formating.f0(risiko)         
 
     #Risiko av total %
@@ -52,6 +58,7 @@ def utregning_kjop ():
     oversikt.append(risiko_prosent_f)
     oversikt.append(risiko_total_prosent_f)
     oversikt.append(avg_entry_f)
+    oversikt.append(stoploss_f)
     oversikt.append(antall)
 
     return oversikt
