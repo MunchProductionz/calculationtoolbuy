@@ -3,6 +3,8 @@ from formating import f2
 
 def utregning_kjop ():
     oversikt = []
+    minste_kurtasje = 29
+    prosent_kurtasje = 0.00005
 
     #Inputs
 
@@ -11,7 +13,15 @@ def utregning_kjop ():
     sum_entries = 0
     sum_antall = 0
     for order in entries:
-        sum_entries += float(order[0])*int(order[1])
+        ordersum = float(order[0])*int(order[1])
+        kurtasje = 0
+        
+        if ordersum < 50000:
+            kurtasje = minste_kurtasje
+        else:
+            kurtasje = ordersum*prosent_kurtasje
+        
+        sum_entries += ordersum + kurtasje          #Problem
         sum_antall += int(order[1])
     
     antall = sum_antall
