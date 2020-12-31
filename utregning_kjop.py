@@ -5,6 +5,7 @@ def utregning_kjop ():
     oversikt = []
     minste_kurtasje = 29
     prosent_kurtasje = 0.00005
+    prosent_justering = 100
 
     #Inputs
 
@@ -21,7 +22,7 @@ def utregning_kjop ():
         else:
             kurtasje = ordersum*prosent_kurtasje
         
-        sum_entries += ordersum + kurtasje          #Problem
+        sum_entries += ordersum + kurtasje
         sum_antall += int(order[1])
     
     antall = sum_antall
@@ -47,17 +48,17 @@ def utregning_kjop ():
     #Ordrestorrelse
     ordrestorrelse = avg_entry * antall
     ordrestorrelse_f = formating.f0(ordrestorrelse)
-    ordrestorrelse_prosent = ordrestorrelse / kapital
+    ordrestorrelse_prosent = (ordrestorrelse / kapital) * prosent_justering
     ordrestorrelse_prosent_f = formating.f2(ordrestorrelse_prosent)
 
     #Risiko %
-    risiko_prosent = (1 - (stoploss / avg_entry)) * 100         #risiko_prosent = (1 - (stoploss /avg_entry)) * 100
+    risiko_prosent = (1 - (stoploss / avg_entry)) * prosent_justering         #risiko_prosent = (1 - (stoploss /avg_entry)) * 100
     risiko_prosent_f = formating.f2(risiko_prosent)
-    risiko = (risiko_prosent / 100) * ordrestorrelse            #risiko = (risiko_prosent / 100) * ordrestorrelse
+    risiko = (risiko_prosent / prosent_justering) * ordrestorrelse            #risiko = (risiko_prosent / 100) * ordrestorrelse
     risiko_f = formating.f0(risiko)         
 
     #Risiko av total %
-    risiko_total_prosent = risiko_prosent * ordrestorrelse_prosent
+    risiko_total_prosent = (risiko_prosent * ordrestorrelse_prosent) / prosent_justering
     risiko_total_prosent_f = formating.f2(risiko_total_prosent)
 
 
